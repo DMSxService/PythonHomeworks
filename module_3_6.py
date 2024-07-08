@@ -1,8 +1,29 @@
-grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
-students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
-students = sorted(students)
-num_of_std = len(students)
-average_score = {students[0]:sum(grades[0])/len(grades[0])}
-for i in range(1,num_of_std):
-    average_score.update({students[i]:sum(grades[i])/len(grades[i])})
-print(average_score)
+data_structure = [[1, 2, 3], {'a': 4, 'b': 5}, (6, {'cube': 7, 'drum': 8}), "Hello",((), [{(2, 'Urban', ('Urban2', 35))}])]
+elem = 0
+counter = 0
+def calculate_structure_sum (data_structure):
+    global counter
+    elem = data_structure.pop(0)
+    if isinstance(elem, list):
+        data_structure.extend(elem)
+    elif isinstance(elem, str):
+        data_structure.append(len(elem))
+    elif isinstance(elem, int):
+        counter += elem
+    elif isinstance(elem, float):
+        counter += elem
+    elif isinstance(elem, dict):
+        data_structure.extend(elem.keys())
+        data_structure.extend(elem.values())
+    elif isinstance(elem, bool):
+        counter += int(elem)
+    elif isinstance(elem, tuple):
+        data_structure.extend(elem)
+    elif isinstance(elem, set):
+        data_structure.extend(elem)
+    if len(data_structure)>0:
+        calculate_structure_sum(data_structure)
+    return counter
+
+result = calculate_structure_sum (data_structure)
+print(result)

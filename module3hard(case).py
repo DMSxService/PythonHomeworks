@@ -25,8 +25,7 @@ def calculate_structure_sum (data_structure):
             data_structure.extend(elem)
         case builtins.set:
             data_structure.extend(elem)
-    if len(data_structure)>0:
-        calculate_structure_sum(data_structure)
+    calculate_structure_sum(data_structure)
     return counter
 
 result = calculate_structure_sum (data_structure)

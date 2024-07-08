@@ -3,7 +3,7 @@ data_structure = [[1, 2, 3], {'a': 4, 'b': 5}, (6, {'cube': 7, 'drum': 8}), "Hel
 counter = 0
 def calculate_structure_sum (data_structure):
     global counter
-    if len(data_structure) != 0:
+    if len(data_structure) != 0 and isinstance(data_structure, list):
         elem = data_structure.pop(0)
         el_tp = type(elem)
         match el_tp:

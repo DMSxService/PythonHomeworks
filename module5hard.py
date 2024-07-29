@@ -1,37 +1,44 @@
 users = []
 videos = []
+current_user = None
 
 
 class User:
     def __init__(self, nickname, password, age):
-        users.append({nickname: [password, hash(password), age]})
+        self.nickname = nickname
+        self.password = hash(password)
+        self.age = age
+
+
 
 
 class Video:
     def __init__(self, title, duration, time_now=0, adult_mode=False):
-        videos.append({title: [duration, time_now, adult_mode]})
+        self.title = title
+        self.duration = duration
+        self.time_now = time_now
+        self.adult_mode = adult_mode
 
 
 class UrTube:
-
-    def __init__(self):
-        pass
-
     def log_in(self):
-        pass
+        if self in users:
+            print(f'Мегаюзер')
 
+        print(f'Гигаюзер')
     def register(self, nickname, password, age):
+
         pass
 
     def log_out(self, current_user):
         pass
 
     def add(self, *other):
-        if not (self in videos):
+        if self != other:
             videos.append(self)
-            print('No cinema')
+            print(self)
         else:
-            print('Cinema exist')
+            print(f'Видео уже существует')
 
     def get_videos(self, search):
         if search in videos:

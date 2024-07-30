@@ -5,10 +5,7 @@ current_user = None
 
 class User:
     def __init__(self, nickname, password, age):
-        self.nickname = nickname
-        self.password = hash(password)
-        self.age = age
-
+        self.user = {nickname: (password, age)}
 
 
 
@@ -20,7 +17,10 @@ class Video:
         self.adult_mode = adult_mode
 
 
-class UrTube:
+class UrTube(User, Video):
+    def __init__(self):
+        User.__init
+        Video.__init__(self)
     def log_in(self):
         if self in users:
             print(f'Мегаюзер')

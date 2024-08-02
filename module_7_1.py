@@ -26,7 +26,7 @@ class Shop:
                 print(f'Продукт {pr_list[0]} уже есть в магазине')
             else:
                 file_op = open(self.__file_name, 'a')
-                file_op.write(str(i)+"\n")
+                file_op.write(str(i) + "\n")
                 file_op.close()
 
 

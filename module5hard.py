@@ -10,7 +10,6 @@ class User:
 
 
 class Video:
-    # video = None
 
     def __init__(self, title, duration, time_now=0, adult_mode=False):
         self.title = title
@@ -84,9 +83,6 @@ class UrTube:
                 time.sleep(1)
                 vs[1] = 0
         return
-        #         self.current_user = nickname
-        # self.current_user[2] < 18:
-        # print("Вам нет 18 лет, пожалуйста покиньте страницу")
 
 
 ur = UrTube()

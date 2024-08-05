@@ -1,9 +1,9 @@
 def custom_write(file_name, strings):
     file = open(file_name, 'w', encoding='UTF-8')
     strings_position = {}
-    for i in range(0, len(strings)):
-        strings_position[(i + 1, file.tell())] = strings[i]
-        file.write(str(strings[i]) + '\n')
+    for line in range(0, len(strings)):
+        strings_position[(line+1, file.tell())] = strings[line]
+        file.write(str(strings[line]) + '\n')
     file.close()
     return strings_position
 

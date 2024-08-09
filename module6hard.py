@@ -5,7 +5,7 @@ class Figure:
     sides_count = 0
     filled = False
 
-    def __init__(self, __color, __sides, filled=False):
+    def __init__(self, __color, __sides):
 
         self.__color = __color
         self.__sides = __sides

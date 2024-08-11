@@ -3,7 +3,8 @@ def add_everything_up(a, b):
         a + b
     except TypeError:
         return str(a) + str(b)
-    return "{:.3f}".format(a+b)
+    else:
+        return "{:.3f}".format(a+b)
 
 
 print(add_everything_up(123.456, 'строка'))

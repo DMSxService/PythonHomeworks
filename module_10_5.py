@@ -25,7 +25,7 @@ print(f'{time_res} линейный')
 # Многопроцессный
 if __name__ == '__main__':
     time_start = datetime.now()
-    with multiprocessing.Pool(processes=4) as pool:
+    with multiprocessing.Pool(processes=len(filenames)) as pool:
         pool.map(read_info, filenames)
     time_end = datetime.now()
     time_res = time_end - time_start

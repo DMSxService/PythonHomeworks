@@ -1,5 +1,4 @@
 import multiprocessing
-import sys
 from datetime import datetime
 
 
@@ -12,15 +11,15 @@ def read_info(name):
             string = strings.readline()
 
 
-filenames = [f'./file {number}.txt' for number in range(1, 5)]
+filenames = [f'D:\\PythonHomeworks\\Other_files\\file {number}.txt' for number in range(1, 5)]
 
 # Линейный вызов
-time_start = datetime.now()
-for i in filenames:
-    read_info(i)
-time_end = datetime.now()
-time_res = time_end - time_start
-print(f'{time_res} линейный')
+# time_start = datetime.now()
+# for i in filenames:
+#     read_info(i)
+# time_end = datetime.now()
+# time_res = time_end - time_start
+# print(f'{time_res} линейный')
 
 # Многопроцессный
 if __name__ == '__main__':
@@ -30,7 +29,6 @@ if __name__ == '__main__':
     time_end = datetime.now()
     time_res = time_end - time_start
     print(f'{time_res} многопроцессный')
-
 
 # 0:00:09.376185 линейный
 # 0:00:04.227996 многопроцессный

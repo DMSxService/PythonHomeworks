@@ -1,8 +1,8 @@
-from unittest import TestCase
+import unittest
 import runner
 
 
-class RunnerTest(TestCase):
+class RunnerTest(unittest.TestCase):
     def test_walk(self):
         t1 = runner.Runner("Konstantin")
         for i in range(0, 10):

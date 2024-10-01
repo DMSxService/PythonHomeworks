@@ -3,6 +3,7 @@ import runner_and_tournament
 
 
 class TournamentTest(unittest.TestCase):
+
     @classmethod
     def setUpClass(cls):
         cls.all_results = {}

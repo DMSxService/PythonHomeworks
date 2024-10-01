@@ -27,7 +27,7 @@ class TournamentTest(unittest.TestCase):
             ar[i] = str(race[i])
         n = len(TournamentTest.all_results)
         TournamentTest.all_results[n] = ar
-        self.assertTrue(str('Ник' == race[len(race)]), 'Последним стал не Ник')
+        self.assertTrue('Ник' == race[len(race)], 'Последним стал не Ник')
 
     def test_race2(self):
         ar = {}
@@ -38,7 +38,7 @@ class TournamentTest(unittest.TestCase):
             ar[i] = str(race[i])
         n = len(TournamentTest.all_results)
         TournamentTest.all_results[n] = ar
-        self.assertTrue(str('Ник' == race[len(race)]), 'Последним стал не Ник')
+        self.assertTrue('Ник' == race[len(race)], 'Последним стал не Ник')
 
     def test_race3(self):
         ar = {}
@@ -50,7 +50,7 @@ class TournamentTest(unittest.TestCase):
             ar[i] = str(race[i])
         n = len(TournamentTest.all_results)
         TournamentTest.all_results[n] = ar
-        self.assertTrue(str('Ник' == race[len(race)]), 'Последним стал не Ник')
+        self.assertTrue('Ник' == race[len(race)], 'Последним стал не Ник')
 
 
 if __name__ == '__main__':

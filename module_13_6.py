@@ -43,10 +43,13 @@ async def get_formulas(call):
                               'женщин: 10 x вес (кг) + 6,25 x рост (см) – 5 x возраст (г) – 161.',
                               reply_markup=types.ReplyKeyboardRemove())
 
+    await call.answer()
+
 
 @dp.callback_query_handler(text='calories')
 async def set_age(call):
     await call.message.answer('Введите свой возраст:', reply_markup=types.ReplyKeyboardRemove())
+    await call.answer()
     await UserState.age.set()
 
 

@@ -6,7 +6,7 @@ def introspection_info(obj):
     methods = []
     for attr_name in dir(obj):
         attr = getattr(obj, attr_name)
-        if isinstance(attr, int):
+        if isinstance(attr, tp):
             attributes.append(attr_name)
             continue
         elif attr_name == '__doc__' or attr_name == '__class__':
